@@ -30,3 +30,16 @@ Once we have our image, we tell docker to start container using that image and o
 Instead of running our application on our machine, we tell docker to run it inside a container.
 
 Once we have this image we can push it to registry like docker hub. Docker hub to docker is like github to git. It's a storage for docker images that anyone can use. So, any machine running docker can pull our image and run it.
+
+
+# Packagine our application
+<!-- 
+-t : is a tag to identify our image
+.  : to identify the docker directory  -->
+`docker build -t hello-docker .`
+
+List all available images
+`docker image ls`
+
+Run the image
+`docker run hello-docker`
