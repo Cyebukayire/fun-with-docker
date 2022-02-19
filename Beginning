@@ -1,0 +1,32 @@
+### Docker Intro
+
+Docker is a platform for building, running and shipping applications
+It can run and function the same way on other machines.
+
+Docker creates isolated environments to install all dependencies and run your application anywhere
+
+# Container
+A container is an isolated environment for running an application.
+
+With containers we can:
+    Allow running multiple apps in isolation
+    Are lightweight
+    Use OS of the host
+    Start quickly
+    Need less harware resources
+
+# Application
+To dockerize your application just add a docker file in the root directory of your project. This docker file turns the application into an image that contains everything our application needs to run
+
+# Image
+Image contains:
+    A cut-down OS
+    A runtime environment eg: node
+    Application files
+    Third-party Libraries
+    Environment variables
+
+Once we have our image, we tell docker to start container using that image and our application gets loaded inside the container.
+Instead of running our application on our machine, we tell docker to run it inside a container.
+
+Once we have this image we can push it to registry like docker hub. Docker hub to docker is like github to git. It's a storage for docker images that anyone can use. So, any machine running docker can pull our image and run it.
