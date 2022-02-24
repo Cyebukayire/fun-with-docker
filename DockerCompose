@@ -1,0 +1,21 @@
+### Docker Compose
+Use Docker Compose to replace run commands you're using over and over again.
+
+# What is Docker Compose?
+Docker Daemon is responsible for:
+    Pulling images and starting containers
+    Managing volumenes, networks, and DNS
+
+The REST API provides access to the Daemon
+    Available locally at /var/run/docker.sock
+
+The Docker CLI is simply making API requests
+
+## Docker Compose commands
+
+`docker-compose`
+    `up` - Spin up al the services
+    `down` - tear it all down
+    `logs` - view all logs in a single stream
+
+1. 
