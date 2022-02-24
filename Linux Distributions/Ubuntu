@@ -1,0 +1,71 @@
+### Ubuntu
+`docker pull ubuntu` To pull ubuntu image on our local machine
+`docker run ubuntu`
+This command will first pull ubuntu image and then run it in our container
+
+To find all running containers
+`docker ps -a`
+
+`coker ps` won't show anything
+
+# To enter into a container and interact with it
+`docker run -it ubuntu`
+now, you get into the shell prompt
+{currently logged in user}@{name of the machine}:/#
+
+Simple commands on the shell:
+`echo hello` Prints the "hello" message
+`whoami` Shows current user
+`echo $0` Prints direcotry
+`history` Lists all executed commands lately
+`!2` Runs the second command on the list
+
+
+### Package manager
+ex: apt
+
+To list all available packages
+`apt list`
+
+## Installing a package
+Before installing a certain package, first update the package database
+`apt update`
+Then install your package
+ex: install nano package
+`apt install nano`
+
+To remove a package
+`apt remove packageName`
+
+## Simple commans
+`pwd` Shows current directory
+`ls` Lists all items in current directory in multiple lines
+`ls -1` Lists all items on one line
+`cd /folder`
+`cd ..`
+
+## Manipulating files and directories
+`mkdir dirName` Creating a directory
+`mv currentDirName newDirName` Rename or move  a directory or file to another directory
+`touch fileName` Create a file
+`touch file1.txt file2.txt` Create multiple files
+`rm file1.txt file2.txt` removes multiple files
+`rm file*` removes all files that start with 'file' keyword
+`rm -r` removes directory
+
+## Editing and Viewing Files
+`nano fileName.txt` Open & edit file
+`cat fileName` Prints the content of a file
+`more fileName` Helps read the content of a big file in terminal. You can't scroll up
+`less fileName`  Works like 'more' command but this one allows to scroll up and down
+Press q when done
+` head -n 5 fineName` Shows the first five lines
+`tail -n 5 fileName.txt` Shows the last five lines of a file
+
+## Redirection / Change the source of output or input
+`cat file1.txt > file2.txt` Reads content from file1 and write it to file2
+`cat file1.txt file2.txt` Reads the data from both files and prints it.
+`cat file.txt file2.txt > combined.txt` Reads data from both files and writes it to combined.txt
+`echo hello > hello.txt` Writes text to a file
+
+
