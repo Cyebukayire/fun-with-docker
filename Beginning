@@ -79,5 +79,5 @@ To remove an existed container
 4. Now save and share your image
 Save and share your image on Docker Hub to enable other users to easily download and run the image on any destination machine.
 
-`docker tag dockerfirstrial {userName}/dockerfirstrial`
-`docker push {userName}/dockerfirstrial`
+`docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
+`docker push <hub-user>/<repo-name>:<tag>`

@@ -4,6 +4,7 @@ Use Docker Compose to replace run commands you're using over and over again.
 # What is Docker Compose?
 Docker Daemon is responsible for:
     Pulling images and starting containers
+    It helps run multiple docker containers much easier than with docker run commands
     Managing volumenes, networks, and DNS
 
 The REST API provides access to the Daemon
@@ -18,4 +19,7 @@ The Docker CLI is simply making API requests
     `down` - tear it all down
     `logs` - view all logs in a single stream
 
-1. 
+## Docker run command
+EX: For "mongo-db"
+docker run -d\
+ 
