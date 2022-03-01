@@ -20,6 +20,26 @@ The Docker CLI is simply making API requests
     `logs` - view all logs in a single stream
 
 ## Docker run command
-EX: For "mongo-db"
-docker run -d\
+`
+version: '3' // Docker version
+services:
+    mongodb:
+        image: // Image name
+        ports:
+            - 8000:3000
+        envirtonment: // Environment variables
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=password
+    
+    mongo-express:
+    image: mongo-express
+    ports:
+        - 9000:9000
+    environment:
+        - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+        - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+        - ME_CONFIG_MONGODB_SERVER=mongodb
+    
+`
+
  
