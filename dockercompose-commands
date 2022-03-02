@@ -42,23 +42,39 @@ services:
 `
 
  ## Create docker network
- docker network create mongo-network
+` docker network create mongo-network `
 
  ## start mongodb
- docker run -d \
+ `docker run -d \
  -p 3000:3000 \
  -e MONGO_INITDB_ROOT_USERNAME=admin \
  -e MONGO_INITDB_ROOT_PASSWORD=password \
  --net mongo-network \
  --name mongodb \
- mongo
+ mongo`
 
  ## start mongo-express
- docker run -d '
+ `docker run -d '
  -p 9000:9000 \
  -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
  -e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
  -e ME_CONFIG_MONGODB_SERVER=mongodb \
  --net mongo-network \
  --name mongo-express \
- mongo-express
+ mongo-express`
+
+# FOR A SIMPLE NODEJS SERVER
+
+`
+version: "3"
+services:
+    server:
+        container_name: server
+        build: //references the docker file to build the image
+            dockerfile: DockerFile
+        ports:
+            - 8080:3000
+`
+Then run:
+
+`docker-compose up -d`
