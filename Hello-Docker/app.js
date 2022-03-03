@@ -1,32 +1,19 @@
 const express = require ('express')
+const mongoose = require("mongoose")
 const app = express()
 const PORT = 3000
 
-app.get('/', (req, res) => {
-    res.send("Hello World!")
-});
+// Connect to MongoDB 
+mongoose
+    .connect("mongodb://localhost:27017/learning", {useNewUrlParser: true})
+    .then(() => {
+        const app = express()
+        app.get('/', (req, res) => {
+            res.send("Hello, Customer!")
+        });
 
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-})
-
-app.get("/users", (req, res) => {
-    res.send({
-        id: 1,
-        name: "Peace"
-        // users: [
-        //     [
-        //         id= 1,
-        //         name= "Peace"
-        //     ],
-        //     [
-        //         id= 2,
-        //         name= "Musa"
-        //     ],
-        //     [
-        //         id= 3,
-        //         name= "Gedeon"
-        //     ],
-        // ]
+        app.listen(PORT, () => {
+            console.log("Server started...")
+            console.log(`Listening on PORT ${PORT}`)
+        })
     })
-})

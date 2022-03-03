@@ -1,8 +1,9 @@
 {
     "dependencies": {
-        "express": "*"
+        "express": "*",
+        "mongoose": "^6.2.4",
+        "nodemon": "^2.0.15"
     },
-
     "scripts": {
         "start": "node app.js"
     }
