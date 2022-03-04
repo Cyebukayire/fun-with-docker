@@ -8,6 +8,7 @@ const routes = require('./routes')
 mongoose
     .connect("mongodb://localhost:27017/learning", {useNewUrlParser: true})
     .then(() => {
+        console.log("MongoDB Connected Successfully!")
         const app = express()
         app.use(express.json())
         app.use("/api", routes)
