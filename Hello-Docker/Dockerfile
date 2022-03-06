@@ -1,6 +1,6 @@
 # Which linux distribution to use?
 # We could do node:latest but this could mess up our app due to new node updates
-FROM node:10 
+FROM node:alpine
 
 # Current work directory
 WORKDIR /usr/src/app

@@ -4,7 +4,7 @@ services:
   app:
     container_name: docker-node-mongo
     # We dont define image cause we already have it
-    restart: always #Restart when it fails
+    #restart: always #Restart when it fails
     build: . # look for a docker file in current directory and build the image
     ports:
       - "8000:3000"
