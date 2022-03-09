@@ -81,3 +81,8 @@ Save and share your image on Docker Hub to enable other users to easily download
 
 `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
 `docker push <hub-user>/<repo-name>:<tag>`
+
+
+### Entering into the docker container
+`docker run -it [image-name] sh`
+`docker run -it cyebukayire/nodejs-server:version-1 sh`
